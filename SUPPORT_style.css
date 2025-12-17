@@ -260,13 +260,13 @@ ul, li, ol {
 /*partOne*/
 
 .partOne {
-    width: 90%;
+    width: 75%;
     height: auto;
     box-sizing: border-box;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 10px;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -297,13 +297,12 @@ ul, li, ol {
 /* partTwo */
   
 .partTwo {
-    width: 90%;
     height: auto;
-    box-sizing: border-box;
-    padding: 10px;
-    margin: auto;
+    width: 75%;
+    flex-wrap: wrap; 
     display: flex;
-    flex-wrap: wrap;
+    margin: auto;
+    padding: 10px;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -361,15 +360,14 @@ ul, li, ol {
 /*partThree*/
 
 .partThree {
+    height: 800px;
+    width: cover;
     background-color: rgba(76,116,93, 30%);
-    width: 90%;
-    height: auto;
-    box-sizing: border-box;
-    padding: 10px;
-    margin: auto;
+    padding: 15px;
     display: flex;
     flex-wrap: wrap;
     position: relative;
+    margin: 30px 0;
     justify-content: center;
     align-items: center;
 }
@@ -493,7 +491,8 @@ footer {
   height: fit-content;
   width: 100%;
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 1%;
   position: relative;
   justify-content: center;
@@ -681,6 +680,7 @@ select {
 }
 
 
- 
+
+  
   
 

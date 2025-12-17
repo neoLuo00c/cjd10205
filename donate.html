@@ -50,20 +50,24 @@
         </nav>
     </div>
 
-    <div class="main">
-
+    <div class="container">
+        
         <div class="left">
             <h1>台灣狐蝠<br>保育網</h1>
-            <div class="card">
-                <img src="./img/donate/History.png" >
-            </div>  
-            
+            <!-- <div class="card">
+                <img src="./img/donate/History.png">
+                <img src="./img/donate/piece.png" >
+                <img src="./img/donate/group.png" >
+            </div>   -->
         </div>
 
-        <main id="right">
-            <form id="donateForm" action="#" method="post">
-                <h6><span class="require">*</span>為必填項目</h6>
+        <div class="right">
+
+            <div style="position: relative; top: 28%;">
                 <h2>捐款單</h2>
+            </div>
+            
+            <form id="donateForm" action="#" method="post">
                 <table class="donateTable">
                     <caption></caption>
                     <tr>
@@ -113,18 +117,23 @@
                     <tr>
                         <th>備註</th>
                         <td>
-                            <textarea name="message" rows="3" cols="30" placeholder="留言給本會" ></textarea>
+                            <textarea name="message" rows="3" cols="13" placeholder="留言給本會" ></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>注意事項 *</th>
+                        <td>
+                            <p><input type="checkbox" name="" id="" required>在您完成捐款程序後,我們將視為您已確認並同意捐款，金額無法退回。為保障彼此權益,敬請在送出捐款前,仔細確認您欲捐款之金額及相關信息,您的每一筆善款都將被謹慎使用於蝙蝠保護工作,再次感謝您的慷慨解囊與支持。</p>
                         </td>
                     </tr>
                 </table>
-                <div class="donateBtns">
-                    <input type="reset" value="清除重填">
-                    <input type="submit" value="送出">
-                </div>
+            <div class="donateBtns">
+                <input type="reset" value="清除重填">
+                <input type="submit" value="送出">
+            </div>
             </form>
-        </main>  
+        </div>  
     </div>
-
 </body>
 <footer>
     <div class="card" >

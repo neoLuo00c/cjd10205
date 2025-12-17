@@ -259,21 +259,20 @@ ul, li, ol {
 /*partOne*/
 
 .partOne {
-    width: 90%;
-    height: auto;
-    box-sizing: border-box;
-    padding: 10px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 27% 27% 27% ;
     position: relative;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 1%;
     justify-content: center;
     align-items: center;
 }
 .partOne .card{
-    height: fit-content;
-    width: 30%;
-    margin: 10px;
+    height: auto;
+    width: fit-content;
+    margin: 6%;
     background-color: #F5F1E4;
     position: relative;
     border-radius: 9px;
@@ -286,18 +285,17 @@ ul, li, ol {
 }
 
 .partOne .card .img{
-    width: cover;
-    height: auto; 
+    max-width: 100%;
+    height: auto;
     margin-top: 0px;
-    margin-bottom: 3px;
+    margin-bottom: 1px;
 }
 .partOne .card h5{
-  margin: 15px;
-  top: 10px;
+  margin: auto;
 }
 .partOne .card p{
-    margin: 15px;
-    top: 10px;
+    /* margin: 15px;
+    top: 10px; */
 }
 
 
@@ -308,7 +306,8 @@ ul, li, ol {
     height: fit-content;
     box-sizing: border-box;
     padding: 15px 10%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 40%;
     position: relative;	
     justify-content: space-around;
     background-color: rgba(245,166,35, 30%);
@@ -343,7 +342,8 @@ ul, li, ol {
     height: fit-content;
     box-sizing: border-box;
     padding: 15px 10%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 40%;
     justify-content: center;
     align-items: center;
 }
@@ -366,16 +366,15 @@ ul, li, ol {
 /* partFour */
   
 .partFour {
-    width: 90%;
     height: auto;
+    width: 75%;
     box-sizing: border-box;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: 45% 45%;
     margin: auto;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 15px;
     position: relative;
     justify-content: center;
-    align-items: center;
   }
 .partFour .left{
     position: relative; 
@@ -416,7 +415,8 @@ footer {
   height: fit-content;
   width: 100%;
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 1%;
   position: relative;
   justify-content: center;
@@ -590,4 +590,3 @@ select {
     .col-xl-11 {width: 91.6%; }
     .col-xl-12 {width: 100%;  }
 }
-
