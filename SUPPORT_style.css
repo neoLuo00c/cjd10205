@@ -1,13 +1,92 @@
 @charset "utf-8";
+/* header */
 
-.wrap{
-  display: flex;
-  flex-wrap: wrap;
+.main-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    font-family: 'Gen Jyuu Gothic', Regular;
+    -webkit-text-stroke: #6B8EAE 0.3px;
+}
+.logo img{
+    display: block;
+    background-color: white;
 }
 
-/*背景*/
-body {
-  background: #FAF5E2;
+/* checkbox */
+.menu-switch{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hb{
+        position: relative;
+        display: block;
+        width: 45px;
+        height: 45px;
+        border: rgba(0, 0, 0, 0.540) solid 3px;
+        border-radius: 6px;
+        background-color: transparent;
+    }
+    .hb .bar{
+        display: block;
+        width: 75%;
+        height: 3px;
+        position: relative;
+        margin: 0% auto;
+        
+        background-color: #F5A623;
+    }
+    .bar1 {
+        top: 12px;
+    }
+    .bar2 {
+        top: 18px;
+    }
+    .bar3{
+        top: 25px;
+    }
+    .main-menu{
+        position: absolute;
+        /* display: none; */
+        top: 100%;
+        left: -100%;
+        background-color: #fff;
+        width: 60%;
+        height: calc(100svh - 60px);
+        transition: left .6s;
+    }
+    .main-menu ul li ~ li{
+        border-top: 1px solid #F5A623;
+    }
+    .main-menu ul li a{
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+        color: #6B8EAE;
+        background-color: white;
+    }
+    .main-header:has(.menu-switch:checked) .main-menu{
+            left: 0px;
+            z-index: 1;
+    }
+}
+@media screen and (width >= 768px) {
+    .main-menu > ul{
+        display: flex;
+        list-style: none;
+    }
+    .main-menu a{
+        color: #6B8EAE;
+        text-decoration: none;
+        display: block;
+        padding: 10px 1em;
+        background-color: white;
+    }
 }
 
 /*圖片*/
@@ -15,7 +94,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 
 /*按鈕*/
 button {
@@ -36,7 +114,6 @@ button:hover {
   
 }
 
-
 a {
     text-decoration: none;
 }
@@ -54,8 +131,25 @@ a:active {
 a:visited {
     color: #F5A623;
 }
-
-
+/*第一幕按鈕*/
+.banner button {
+  color: #fff;
+  border: #F2A8A5 solid 3px;
+  background-color: #F2A8A5;
+  text-align: center;
+  padding: 9px 3em;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 9px;
+  margin: 0% 20px;
+}
+.banner button:hover {
+  color: #03045E;
+  background-color: #F5A623;
+  border: #F5A623 solid 3px;
+}
 @font-face {
   font-family: 'SentyVanilla';
   src: 
@@ -69,7 +163,7 @@ h1{
   color: #F5A623;
   font-size: 64px;
   text-align: center;
-  line-height: 1;
+  line-height: 1.5;
   font-family: 'SentyVanilla', regular;
 }
 h2 {
@@ -102,11 +196,12 @@ h5 {
   font-weight: bold;
   font-family: 'SentyVanilla', regular;
 }
-p{
+p {
   padding: 5px;
   color: #000000;
   font-size: 18px;
   font-family: 'Gen Jyuu Gothic', Regular;
+  
 }
 
 p span{
@@ -117,7 +212,11 @@ h6 {
   color: #4C745D;
   font-size: 16px;
   font-family: 'SentyVanilla', regular;
+  display: inline-block;
+  flex-wrap: wrap;
+  text-align: left;
 }
+
 
 ul, li, ol {
   color: #000000;
@@ -125,59 +224,23 @@ ul, li, ol {
   font-family: 'Gen Jyuu Gothic', Regular;
   margin-top: 6px;
 }
-ul, li, ol strong{
-  font-size: 18px;
-}
 
-/*頁首*/
+.container{ 
+    background-color: #FAF5E2;
+}
+/*pagetop*/
 
-*{
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-}
-.main-menu > ul{
-        display: flex;
-        list-style: none;
-    }
-.main-menu a{
-    color: #6B8EAE;
-    text-decoration: none;
-    display: block;
-    padding: 10px 1em;
-}
-.main-header{
-  position: sticky;
-  top: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  z-index: 1;
-}
-.logo img{
-    display: block;
-}
-.menu li {
-  list-style-type: none;
-  display: inline-block;
-  width: 150px;
-  margin: 0 10px;
-}
-.menu a {
-  text-align: center;
+.pagetop {
+  width: 45px;
+  height: auto;
+  right: 60px;
+  bottom: 60px;
   display: block;
-  padding: 10px;
-  font-size: 20px;
-  background: #6B8EAE;
-  border-radius: 12px;
-  color: #fff;
-  text-decoration: none;
-}
-.menu a:hover {
-  background: #F5A623;
-}
+  position: fixed;
+  box-sizing: border-box;
+  border-radius: 50%;
+  }
+
 
 
 /* banner */
@@ -193,28 +256,28 @@ ul, li, ol strong{
   line-height: 1;
 }
 
+
 /*partOne*/
 
 .partOne {
-    width: 75%;
+    width: 90%;
     height: auto;
     box-sizing: border-box;
-    display: flex;
-    margin: auto;
     padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     justify-content: center;
     align-items: center;
 }
 .partOne .txt{ 
     height: auto;
-    width: 50%;
     position: relative; 
     margin: 30px;
 }
 .partOne .img{
     height: auto;
-    width: 50%;
     position: relative;
     margin: auto;
 }
@@ -234,12 +297,13 @@ ul, li, ol strong{
 /* partTwo */
   
 .partTwo {
+    width: 90%;
     height: auto;
-    width: 75%;
-    flex-wrap: wrap; 
-    display: flex;
-    margin: auto;
+    box-sizing: border-box;
     padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -297,14 +361,15 @@ ul, li, ol strong{
 /*partThree*/
 
 .partThree {
-    height: 800px;
-    width: cover;
     background-color: rgba(76,116,93, 30%);
-    padding: 15px;
+    width: 90%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin: 30px 0;
     justify-content: center;
     align-items: center;
 }
@@ -405,10 +470,7 @@ ul, li, ol strong{
     position: relative;
     justify-content: center;
     align-items: center;
-    background-image: url(./img/SUPPORT/bg2.png);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position-y: -180px;
+    background-color: rgba(76,116,93, 30%);
 }
 .partFive .card{ 
   width: 100%;
@@ -428,25 +490,24 @@ ul, li, ol strong{
 
 /*頁尾*/
 footer {
-  height: 540px;
-  width: cover;
+  height: fit-content;
+  width: 100%;
   box-sizing: border-box;
   display: flex;
-  margin: auto;
-  padding: 30px;
+  padding: 1%;
   position: relative;
   justify-content: center;
-  align-items: center;
   background-color: #6B8EAE;
+  border: #6B8EAE 6px solid;
   text-align: left;
 }
 
 footer .card {
   height: auto;
-  width: 30%;
-  margin: 15px;
+  width: 100%;
   position: relative;
-  padding: 0;
+  margin-left: -10%;
+  padding: 5%;
 }
 
 footer strong{
@@ -461,15 +522,19 @@ footer strong{
 
 footer .icon{
   position: relative; 
-  width: 270px ;
+  width: 60% ;
+  height: auto;
   display: flex;	
+  flex-wrap: wrap;
   justify-content: space-around;
+  margin-left: 9px;
 }
 
 footer .icon a{
   width: auto; 
   height: 45px;
 }
+
 
 footer a {
     text-decoration: none;
@@ -486,7 +551,7 @@ footer a:active {
     color: #03045E;
 }
 
-/*表單*/
+/*footer表單*/
 
 .EndTable input[type="email"]{
   width: 50%;
@@ -508,7 +573,7 @@ footer a:active {
     border: none;
   }
 
-  /*表單按鈕*/
+  /*footer表單按鈕*/
   .EndTable .Btns {
     text-align: center;
     position: relative;
@@ -526,11 +591,20 @@ footer a:active {
     width: 90%;
   }
 
-  /*滑鼠移到送出鈕*/
+  /*footer滑鼠移到送出鈕*/
   .EndTable .Btns input:hover {
     opacity: 0.7;
   }
-    
+ 
+
+/*footer滑鼠*/
+label,
+input,
+textarea,
+select {
+  cursor: pointer;
+}
+
 /*pagetop*/
   .pagetop {
   width: 45px;
@@ -542,37 +616,71 @@ footer a:active {
   box-sizing: border-box;
   border-radius: 50%;
   }
+/* RWD */
 
-  /*  */
-/*rwd*/
-
-/* .col{
+[class*="col-"]{
     box-sizing: border-box;
-    width: 100%;
-    padding: 10px 20px;
+    padding:0 10px;
 }
-.card{
-    height: 100px;
-    background-color: #fa0;
-} */
+.col-1 {width: 8.3%; }
+.col-2 {width: 16.6%; }
+.col-3 {width: 25%; }
+.col-4 {width: 33.3%; }
+.col-5 {width: 41.6%; }
+.col-6 {width: 50%; }
+.col-7 {width: 58.3%; }
+.col-8 {width: 66.6%; }
+.col-9 {width: 75%; }
+.col-10 {width: 83.3%; }
+.col-11 {width: 91.6%; }
+.col-12 {width: 100%; }
 
-@media screen and (min-width:768px) {
-    .col{
-        width: 50%;
-    }
+@media screen and (min-width: 768px){
+    .col-md-1 {width: 8.3%; }
+    .col-md-2 {width: 16.6%; }
+    .col-md-3 {width: 25%; }
+    .col-md-4 {width: 33.3%; }
+    .col-md-5 {width: 41.6%; }
+    .col-md-6 {width: 50%; }
+    .col-md-7 {width: 58.3%; }
+    .col-md-8 {width: 66.6%; }
+    .col-md-9 {width: 75%; }
+    .col-md-10 {width: 83.3%; }
+    .col-md-11 {width: 91.6%; }
+    .col-md-12 {width: 100%;  }
 }
-@media screen and (min-width:1024px) {
-    .col{
-        width: 33.3%;
-    }
+
+@media screen and (min-width: 1024px){
+    .col-lg-1 {width: 8.3%; }
+    .col-lg-2 {width: 16.6%; }
+    .col-lg-3 {width: 25%; }
+    .col-lg-4 {width: 33.3%; }
+    .col-lg-5 {width: 41.6%; }
+    .col-lg-6 {width: 50%; }
+    .col-lg-7 {width: 58.3%; }
+    .col-lg-8 {width: 66.6%; }
+    .col-lg-9 {width: 75%; }
+    .col-lg-10 {width: 83.3%; }
+    .col-lg-11 {width: 91.6%; }
+    .col-lg-12 {width: 100%;  }
 }
-@media screen and (min-width:1200px) {
-    .col{
-        width: 25%;
-    }
+
+@media screen and (min-width: 1200px){
+    .col-xl-1 {width: 8.3%; }
+    .col-xl-2 {width: 16.6%; }
+    .col-xl-3 {width: 25%; }
+    .col-xl-4 {width: 33.3%; }
+    .col-xl-5 {width: 41.6%; }
+    .col-xl-6 {width: 50%; }
+    .col-xl-7 {width: 58.3%; }
+    .col-xl-8 {width: 66.6%; }
+    .col-xl-9 {width: 75%; }
+    .col-xl-10 {width: 83.3%; }
+    .col-xl-11 {width: 91.6%; }
+    .col-xl-12 {width: 100%;  }
 }
 
 
-  
+ 
   
 

@@ -1,13 +1,91 @@
-@charset "utf-8";
+/* header */
 
-.wrap{
-  display: flex;
-  flex-wrap: wrap;
+.main-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    font-family: 'Gen Jyuu Gothic', Regular;
+    -webkit-text-stroke: #6B8EAE 0.3px;
+}
+.logo img{
+    display: block;
+    background-color: white;
 }
 
-/*背景*/
-body {
-  background: #73A2A5;
+/* checkbox */
+.menu-switch{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hb{
+        position: relative;
+        display: block;
+        width: 45px;
+        height: 45px;
+        border: rgba(0, 0, 0, 0.540) solid 3px;
+        border-radius: 6px;
+        background-color: transparent;
+    }
+    .hb .bar{
+        display: block;
+        width: 75%;
+        height: 3px;
+        position: relative;
+        margin: 0% auto;
+        
+        background-color: #F5A623;
+    }
+    .bar1 {
+        top: 12px;
+    }
+    .bar2 {
+        top: 18px;
+    }
+    .bar3{
+        top: 25px;
+    }
+    .main-menu{
+        position: absolute;
+        /* display: none; */
+        top: 100%;
+        left: -100%;
+        background-color: #fff;
+        width: 60%;
+        height: calc(100svh - 60px);
+        transition: left .6s;
+    }
+    .main-menu ul li ~ li{
+        border-top: 1px solid #F5A623;
+    }
+    .main-menu ul li a{
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+        color: #6B8EAE;
+        background-color: white;
+    }
+    .main-header:has(.menu-switch:checked) .main-menu{
+            left: 0px;
+            z-index: 1;
+    }
+}
+@media screen and (width >= 768px) {
+    .main-menu > ul{
+        display: flex;
+        list-style: none;
+    }
+    .main-menu a{
+        color: #6B8EAE;
+        text-decoration: none;
+        display: block;
+        padding: 10px 1em;
+        background-color: white;
+    }
 }
 
 /*圖片*/
@@ -131,55 +209,20 @@ ul, li, ol {
   margin-top: 6px;
 }
 
-/*頁首*/
+  
+/*pagetop*/
 
-*{
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-}
-.main-menu > ul{
-        display: flex;
-        list-style: none;
-    }
-.main-menu a{
-    color: #6B8EAE;
-    text-decoration: none;
-    display: block;
-    padding: 10px 1em;
-}
-.main-header{
-  position: sticky;
-  top: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  z-index: 1;
-}
-.logo img{
-    display: block;
-}
-.menu li {
-  list-style-type: none;
-  display: inline-block;
-  width: 150px;
-  margin: 0 10px;
-}
-.menu a {
-  text-align: center;
+.pagetop {
+  width: 45px;
+  height: auto;
+  right: 60px;
+  bottom: 60px;
   display: block;
-  padding: 10px;
-  font-size: 20px;
-  background: #6B8EAE;
-  border-radius: 12px;
-  color: #fff;
-  text-decoration: none;
-}
-.menu a:hover {
-  background: #F5A623;
-}
+  position: fixed;
+  box-sizing: border-box;
+  border-radius: 50%;
+  }
+
 
 /* main */
 
@@ -201,12 +244,17 @@ ul, li, ol {
 /* left */
 
  .left{
-  width: 30%;
-  height: 100%;
-  position: relative; 
+  width: 90%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
   background-color: #4C745D;
-  margin-left: 0%;
-  padding: 10px;
 }
 
 .left .card{
@@ -221,10 +269,10 @@ ul, li, ol {
     align-items: center;	
   justify-content: space-around;
 }
-
+/* 
 .left img,video{
   opacity: 30%;
-}
+} */
 
 .left img{
   width: 30%;
@@ -234,165 +282,16 @@ ul, li, ol {
 .left img:hover {
   border: #F5A623 solid 3px;
   opacity: 100%;
+  scale: 300%;
+  bottom: -30%;
 }
-
+/* 
 .left video{
   position: relative;
-  bottom: 30px;
 }
 .left video:hover {
   opacity: 100%;
-}
-
-
-/*頁尾*/
-footer {
-  height: 540px;
-  width: cover;
-  box-sizing: border-box;
-  display: flex;
-  margin: auto;
-  padding: 30px;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  background-color: #6B8EAE;
-  text-align: left;
-}
-
-footer .card {
-  height: auto;
-  width: 30%;
-  margin: 15px;
-  position: relative;
-  padding: 0;
-}
-
-footer strong{
-  color: #03045E;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: 'Gen Jyuu Gothic', Regular;
-  position: relative;
-  text-align: left;
-  line-height: 2.5;
-}
-
-footer .icon{
-  position: relative; 
-  width: 270px ;
-  display: flex;	
-  justify-content: space-around;
-}
-
-footer .icon a{
-  width: auto; 
-  height: 45px;
-}
-
-
-footer a {
-    text-decoration: none;
-}
-footer a:link {
-    color: #fff;
-}
-
-footer a:hover {
-    color: #F5A623; 
-}
-
-footer a:active {
-    color: #03045E;
-}
-
-/*footer表單*/
-
-.EndTable input[type="email"]{
-  width: 50%;
-  height: auto;
-  padding: 5px;
-  border-radius: 33px;
-  background-color: rgba(255,255,255,30%);
-  box-sizing: border-box;
-  outline: none;
-  font-size: 1em;
-}
-
-.EndTable input[type="email"]:focus {
-  background-color: #F5F1E4;
-  border: 1px solid #ffa700;
-}
-
-.EndTable input[type="email"] {
-    border: none;
-  }
-
-  /*footer表單按鈕*/
-  .EndTable .Btns {
-    text-align: center;
-    position: relative;
-  }
-  .EndTable .Btns input {
-    border: none;
-    border-radius: 33px;
-    font-size: 1em;
-    color: #fff;
-    margin: auto 15px;
-    padding: 10px;
-  }
-  .EndTable .Btns input[type="submit"] {
-    background: #F5A623;
-    width: 90%;
-  }
-
-  /*footer滑鼠移到送出鈕*/
-  .EndTable .Btns input:hover {
-    opacity: 0.7;
-  }
-    
-/*pagetop*/
-
-.pagetop {
-  width: 45px;
-  height: auto;
-  right: 60px;
-  bottom: 60px;
-  display: block;
-  position: fixed;
-  box-sizing: border-box;
-  border-radius: 50%;
-  }
-
-  /*  */
-/*rwd*/
-
-/* .col{
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px 20px;
-}
-.card{
-    height: 100px;
-    background-color: #fa0;
 } */
-
-@media screen and (min-width:768px) {
-    .col{
-        width: 50%;
-    }
-}
-@media screen and (min-width:1024px) {
-    .col{
-        width: 33.3%;
-    }
-}
-@media screen and (min-width:1200px) {
-    .col{
-        width: 25%;
-    }
-}
-
 
 /*捐款單*/
 #right {
@@ -473,12 +372,17 @@ select {
 
 /*捐款按鈕*/
 .donateBtns {
-  width: cover;
-  position: relative;	
-  display: flex;
-  justify-content: space-around;
-  padding: auto;
-  margin-top: 30px;
+width: 90%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    
 }
 
 .donateBtns input {
@@ -510,6 +414,183 @@ select {
 }
 
   
+/*頁尾*/
+footer {
+  height: fit-content;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  padding: 1%;
+  position: relative;
+  justify-content: center;
+  background-color: #6B8EAE;
+  border: #6B8EAE 6px solid;
+  text-align: left;
+}
+
+footer .card {
+  height: auto;
+  width: 100%;
+  position: relative;
+  margin-left: -10%;
+  padding: 5%;
+}
+
+footer strong{
+  color: #03045E;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Gen Jyuu Gothic', Regular;
+  position: relative;
+  text-align: left;
+  line-height: 2.5;
+}
+
+footer .icon{
+  position: relative; 
+  width: 60% ;
+  height: auto;
+  display: flex;	
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 9px;
+}
+
+footer .icon a{
+  width: auto; 
+  height: 45px;
+}
 
 
+footer a {
+    text-decoration: none;
+}
+footer a:link {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #F5A623; 
+}
+
+footer a:active {
+    color: #03045E;
+}
+
+/*footer表單*/
+
+.EndTable input[type="email"]{
+  width: 50%;
+  height: auto;
+  padding: 5px;
+  border-radius: 33px;
+  background-color: rgba(255,255,255,30%);
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1em;
+}
+
+.EndTable input[type="email"]:focus {
+  background-color: #F5F1E4;
+  border: 1px solid #ffa700;
+}
+
+.EndTable input[type="email"] {
+    border: none;
+  }
+
+  /*footer表單按鈕*/
+  .EndTable .Btns {
+    text-align: center;
+    position: relative;
+  }
+  .EndTable .Btns input {
+    border: none;
+    border-radius: 33px;
+    font-size: 1em;
+    color: #fff;
+    margin: auto 15px;
+    padding: 10px;
+  }
+  .EndTable .Btns input[type="submit"] {
+    background: #F5A623;
+    width: 90%;
+  }
+
+  /*footer滑鼠移到送出鈕*/
+  .EndTable .Btns input:hover {
+    opacity: 0.7;
+  }
+ 
+
+/*footer滑鼠*/
+label,
+input,
+textarea,
+select {
+  cursor: pointer;
+}
+/* RWD */
+
+[class*="col-"]{
+    box-sizing: border-box;
+    padding:0 10px;
+}
+.col-1 {width: 8.3%; }
+.col-2 {width: 16.6%; }
+.col-3 {width: 25%; }
+.col-4 {width: 33.3%; }
+.col-5 {width: 41.6%; }
+.col-6 {width: 50%; }
+.col-7 {width: 58.3%; }
+.col-8 {width: 66.6%; }
+.col-9 {width: 75%; }
+.col-10 {width: 83.3%; }
+.col-11 {width: 91.6%; }
+.col-12 {width: 100%; }
+
+@media screen and (min-width: 768px){
+    .col-md-1 {width: 8.3%; }
+    .col-md-2 {width: 16.6%; }
+    .col-md-3 {width: 25%; }
+    .col-md-4 {width: 33.3%; }
+    .col-md-5 {width: 41.6%; }
+    .col-md-6 {width: 50%; }
+    .col-md-7 {width: 58.3%; }
+    .col-md-8 {width: 66.6%; }
+    .col-md-9 {width: 75%; }
+    .col-md-10 {width: 83.3%; }
+    .col-md-11 {width: 91.6%; }
+    .col-md-12 {width: 100%;  }
+}
+
+@media screen and (min-width: 1024px){
+    .col-lg-1 {width: 8.3%; }
+    .col-lg-2 {width: 16.6%; }
+    .col-lg-3 {width: 25%; }
+    .col-lg-4 {width: 33.3%; }
+    .col-lg-5 {width: 41.6%; }
+    .col-lg-6 {width: 50%; }
+    .col-lg-7 {width: 58.3%; }
+    .col-lg-8 {width: 66.6%; }
+    .col-lg-9 {width: 75%; }
+    .col-lg-10 {width: 83.3%; }
+    .col-lg-11 {width: 91.6%; }
+    .col-lg-12 {width: 100%;  }
+}
+
+@media screen and (min-width: 1200px){
+    .col-xl-1 {width: 8.3%; }
+    .col-xl-2 {width: 16.6%; }
+    .col-xl-3 {width: 25%; }
+    .col-xl-4 {width: 33.3%; }
+    .col-xl-5 {width: 41.6%; }
+    .col-xl-6 {width: 50%; }
+    .col-xl-7 {width: 58.3%; }
+    .col-xl-8 {width: 66.6%; }
+    .col-xl-9 {width: 75%; }
+    .col-xl-10 {width: 83.3%; }
+    .col-xl-11 {width: 91.6%; }
+    .col-xl-12 {width: 100%;  }
+}
 

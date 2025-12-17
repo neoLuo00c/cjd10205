@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    background-color: #FAF5E2;
+}
+.container{ /* body footer */
+    margin: auto;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+.row{ /* parts */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px; 
+    /* 不會超出去@@ */
+}
+
+/* header */
+
+.main-header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    font-family: 'Gen Jyuu Gothic', Regular;
+    -webkit-text-stroke: #6B8EAE 0.3px;
+}
+.logo img{
+    display: block;
+    background-color: white;
+}
+
+/* checkbox */
+.menu-switch{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hb{
+        position: relative;
+        display: block;
+        width: 45px;
+        height: 45px;
+        border: rgba(0, 0, 0, 0.540) solid 3px;
+        border-radius: 6px;
+        background-color: transparent;
+    }
+    .hb .bar{
+        display: block;
+        width: 75%;
+        height: 3px;
+        position: relative;
+        margin: 0% auto;
+        
+        background-color: #F5A623;
+    }
+    .bar1 {
+        top: 11px;
+    }
+    .bar2 {
+        top: 19px;
+    }
+    .bar3{
+        top: 27px;
+    }
+    .main-menu{
+        position: absolute;
+        /* display: none; */
+        top: 100%;
+        left: -100%;
+        background-color: #fff;
+        width: 60%;
+        height: calc(100svh - 60px);
+        transition: left .6s;
+    }
+    .main-menu ul li ~ li{
+        border-top: 1px solid #F5A623;
+    }
+    .main-menu ul li a{
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+        color: #6B8EAE;
+        background-color: white;
+    }
+    .main-header:has(.menu-switch:checked) .main-menu{
+            left: 0;
+    }
+}
+@media screen and (width >= 768px) {
+    .main-menu > ul{
+        display: flex;
+        list-style: none;
+    }
+    .main-menu a{
+        color: #6B8EAE;
+        text-decoration: none;
+        display: block;
+        padding: 10px 1em;
+        background-color: white;
+    }
+}
+
+grid-template-columns：網格區塊寬度
+{
+
+}
+grid-template-rows：網格區塊高度
+
+grid-template-areas：網格區塊名稱
+
+grid-column-gap：網格區塊左右間距
+
+grid-row-gap：網格區塊上下間距
+
+grid-column：指定網格左右的位置，ex:＜start-line(起)＞ / ＜end-line(尾)＞ | span＜value＞
+
+grid-row：指定網格上下的位置，ex:＜start-line(起)＞ / ＜end-line(尾)＞ | span＜value＞
+

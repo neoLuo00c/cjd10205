@@ -14,19 +14,26 @@
 
     <!-- inport -->
     <link href="aboutAnimal_style.css" rel="stylesheet" media="all">
-    
 </head>
 
 
-</head>
-<body>
+
+<body class="container">
     <div class="main-header">
+
         <div class="logo">
             <a href="./index.html"><img src="./img/logo-header.png"></a>
         </div>
+
+        <label class="hb">
+            <input type="checkbox" class="menu-switch">
+            <span class="bar bar1"></span>
+            <span class="bar bar2"></span>
+            <span class="bar bar3"></span>
+        </label>
         
         <nav class="main-menu">
-            <ul class="menu">
+            <ul class="menu" style="list-style-type: none;">
                 <li class="menu-item">
                     <a href="./aboutRescue.html">如何救傷</a>
                 </li>
@@ -112,7 +119,7 @@
         <div class="card" style="display: flex;">
             <img src="./img/aboutAnamal/info2.png" style="height: auto;width:50%;">
             <div class="txt" style="height: 100%;width:50%;display: flex; justify-content: center; align-items: center;margin-left:10px;">
-                <p><span style="padding: 9px;  color: #4C745D;  font-size: 20px;  font-weight: bold;  font-family: 'SentyVanilla', regular;">1993年</span><br>前後<br>族群開始<br><span>重大萎縮了<br>十倍</span><br>(2324→223) </p>
+                <p><span style="color: #4C745D;  font-size: 20px;  font-weight: bold;  font-family: 'SentyVanilla', regular;">1993年</span><br>前後<br>族群開始<br><span>重大萎縮了<br>十倍</span><br>(2324→223) </p>
             </div>
         </div>
 
@@ -140,12 +147,12 @@
                 <li><span>食性：</span>植物果實（如榕屬植物）、花朵 （粉）和嫩芽</li>
             </ul>
         </div>
-    </div>        
+    </div>           
     <div class="partFour">
         <div class="left">
             <img src="./img/aboutAnamal/top.png">
-            <h3 style=" position: absolute; margin-left: 0%;">台灣狐蝠<br>的消長</h3>
-            <img src="./img/aboutAnamal/buttom.png" style=" position: absolute; bottom: 100px;  right: -30px; ">
+            <h3>台灣狐蝠<br>的消長</h3>
+            <img src="./img/aboutAnamal/buttom.png"">
         </div>
         <div class="right">
             <img src="./img/aboutAnamal/History.png">
@@ -154,11 +161,11 @@
     
 </body>
 <footer>
-    <div class="card" >
-        <a href="./index.html" style="height: 100%;width: auto; display: flex; justify-content: center; align-items: center;"><img src="./img/logo-footer.png"></a>
+    <div class="card col-12 col-lg-4 col-xl-4">
+        <a href="./index.html"><img src="./img/logo-footer.png"></a>
     </div>
 
-    <div class="card">
+    <div class="card col-12 col-lg-4 col-xl-4">
         <ul><strong>聯絡資訊</strong></ul>
         <ul style="list-style-type: none;">
             <li>服務時間: </li>
@@ -171,16 +178,15 @@
         </ul>
         <ul>
             <form id="EndForm" action="#" method="post">
-                <div class="EndTable" style="display: flex;width: 100%;"><form id="entryForm" action="#" method="post"></form>
+                <div class="EndTable" style="display: flex; width: 100%;"><form id="entryForm" action="#" method="post"></form>
                     <input type="email" name="email" placeholder="sample@gmail.com" required>
                     <div class="Btns"><input type="submit" value="送出"></div>
                 </div>
             </form>
         </ul>
-        
     </div>
 
-    <div class="card">
+    <div class="card col-12 col-lg-4 col-xl-4">
         <div class="icon">
             <a href="https://www.facebook.com/"><img src="./img/icon/facebook.svg" alt="facebook" ></a>
             <a href="https://www.instagram.com/"><img src="./img/icon/instagram.svg" alt="instagram" ></a>
@@ -196,9 +202,15 @@
             <li>發票愛心碼: 9457</li>
         </ul>
         <br>
-        <ul><smal style="color: #fff;">瀏覽次數: 1,234,680</smal></ul>
+        <ul style="list-style-type: none;">
+            <li><smal style="color: #fff;">瀏覽次數: 1,234,680</smal></li>
+            <li><small>台灣狐蝠保育網 版權所有 © copyright Reserved.</small></li>
+        </ul>
+        
     </div>
-    <a class="pagetop" href="#"><img src="./img/icon/arrow.svg"></a>
 </footer>
-
+    <div>
+        <a class="pagetop" href="#"><img src="./img/icon/arrow.svg"></a>
+    </div>
 </html>
+
