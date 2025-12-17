@@ -290,58 +290,34 @@ ul, li, ol {
 /*partTwo*/
 
 .partTwo {
-    width: 75%;
-    height: fit-content;
+    width: 90%;
+    height: auto;
     box-sizing: border-box;
     padding: 10px;
-    display: grid;
-    position: relative;
-    flex-wrap: wrap;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 30% 30% 30% ;
-    flex-wrap: wrap;
 }
 .partTwo .card{
-  display: grid;
-    height: fit-content;
-    flex-wrap: wrap;
-    margin: 3%;
-    padding: 3%;
-    grid-template-rows: 50% 50% ;
+    height: 300px;
+    width: 30%;
+    margin: 13px;
+    padding: 5px;
+    position: relative;
+    
 }
-
-.partTwo .card2 .txt,
 .partTwo .card .txt{
     text-align: center;
     position: relative;
     border-radius: 15px;
     background-color: #F5F1E4;
-    margin: 3%;
-    padding: 3%;
-    line-height: 1.2;
-    display: grid;
+  margin: -18px;
 }
-.partTwo .card2 .img,
 .partTwo .card .img{
     position: relative;
-    height: fit-content;
-    width: auto;
-}
-
-.partTwo .card2{
-  display: grid;
-    height: cover;
-    margin: 3%;
-    padding: 3%;
-    grid-template-rows: 100% ;
-    grid-template-columns: 50% 50% ;
-    flex-wrap: wrap;
-}
-
-.partTwo .card2 .txt{
-  height: fit-content;
 }
 
 .partTwo .card .txt:hover {
@@ -349,28 +325,28 @@ ul, li, ol {
   background: rgba(245,166,35, 30%);
 }
 
-.partTwo .card2 .txt:hover {
-  border: #F5A623 solid 3px ;
-  background: rgba(245,166,35, 30%);
+.partTwo h5{
+  margin: -15px;
 }
+
 
 /*partThree*/
 
 .partThree {
-    width: 75%;
+    width: 90%;
     height: auto;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 50% 50% ;
-    margin: auto;
     padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 .partThree .img{
-    height: auto;
+    height: 300px;
+    width: auto;
     position: relative; 
     margin: auto;
     border-radius: 9px;
@@ -378,7 +354,7 @@ ul, li, ol {
 }
 .partThree .txt{ 
     height: auto;
-    margin-left: 10px;
+    width: 50%;
     padding: 60px;
     position: relative;
     
