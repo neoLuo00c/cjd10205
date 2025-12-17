@@ -1,0 +1,578 @@
+@charset "utf-8";
+
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*背景*/
+body {
+  background: #FAF5E2;
+}
+
+/*圖片*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*按鈕*/
+button {
+  color: #fff;
+  background-color: #6B8EAE;
+  border: none;
+  text-align: center;
+  padding: 9px 6em;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 9px;
+}
+button:hover {
+  color: black;
+  background-color: #F5A623;
+  
+}
+
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #F5A623;
+}
+
+a:hover {
+    color: #564032; 
+}
+
+a:active {
+    color: #564032;
+}
+a:visited {
+    color: #F5A623;
+}
+
+
+@font-face {
+  font-family: 'SentyVanilla';
+  src: 
+         url('./SentyVanilla.ttf') format("truetype"),
+        }
+
+/*標題&文字設定*/
+h1{
+  margin: 40px auto;
+  padding: 30px;
+  color: #F5A623;
+  font-size: 64px;
+  text-align: center;
+  line-height: 1;
+  font-family: 'SentyVanilla', regular;
+}
+h2 {
+  margin: auto;
+  padding: 30px;
+  color: #564032;
+  font-size: 48px;
+  text-align: center;
+  line-height: 1;
+  font-family: 'SentyVanilla', regular;
+}
+
+h3 {
+  padding: 10px;
+  color: #03045E;
+  font-size: 36px;
+  font-family: 'SentyVanilla', regular;
+}
+
+h4 {
+  padding: 10px;
+  color: #F5A623;
+  font-size: 27px;
+  font-family: 'SentyVanilla', regular;
+}
+h5 {
+  padding: 9px;
+  color: #4C745D;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'SentyVanilla', regular;
+}
+p{
+  padding: 5px;
+  color: #000000;
+  font-size: 18px;
+  font-family: 'Gen Jyuu Gothic', Regular;
+}
+
+p span{
+  font-weight: bold;
+  }
+
+h6 {
+  color: #4C745D;
+  font-size: 16px;
+  font-family: 'SentyVanilla', regular;
+}
+
+ul, li, ol {
+  color: #000000;
+  font-size: 18px;
+  font-family: 'Gen Jyuu Gothic', Regular;
+  margin-top: 6px;
+}
+ul, li, ol strong{
+  font-size: 18px;
+}
+
+/*頁首*/
+
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+.main-menu > ul{
+        display: flex;
+        list-style: none;
+    }
+.main-menu a{
+    color: #6B8EAE;
+    text-decoration: none;
+    display: block;
+    padding: 10px 1em;
+}
+.main-header{
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 1;
+}
+.logo img{
+    display: block;
+}
+.menu li {
+  list-style-type: none;
+  display: inline-block;
+  width: 150px;
+  margin: 0 10px;
+}
+.menu a {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  background: #6B8EAE;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+.menu a:hover {
+  background: #F5A623;
+}
+
+
+/* banner */
+
+.banner {
+  width: 75%;
+  height: 300px;
+  display: flex;
+  margin: auto;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  text-align: center;
+  line-height: 1;
+}
+
+/*partOne*/
+
+.partOne {
+    width: 75%;
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.partOne .txt{ 
+    height: auto;
+    width: 50%;
+    position: relative; 
+    margin: 30px;
+}
+.partOne .img{
+    height: auto;
+    width: 50%;
+    position: relative;
+    margin: auto;
+}
+
+.partOne button {
+  margin: 20px;
+  color: #03045E ;
+  border: #6B8EAE solid 3px;
+  background-color: transparent;
+}
+.partOne button:hover {
+  color: white;
+  background-color: #F5A623;
+  border-color: #F5A623;
+}
+
+/* partTwo */
+  
+.partTwo {
+    height: auto;
+    width: 75%;
+    flex-wrap: wrap; 
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+.partTwo .card {
+  width: 100%;
+  height: auto;
+  margin: 30px 10%;
+  padding: 10px;
+  position: relative; 
+  display: flex;     
+  flex-wrap: nowrap; 
+}
+.partTwo .card .short{
+    height: auto;
+    width: 30%;
+    position: relative; 
+    display: flex;     
+    flex-wrap: wrap; 
+    align-content: center;
+  }
+  .partTwo .card .short h3,button{
+    margin: 4.5px auto;
+  }
+.partTwo .card .long{
+    height: auto;
+    width: 60%;
+    position: relative; 
+    display: flex;     
+    flex-wrap: wrap;
+    text-align: left;  
+    align-content: center;
+    font-size: 18px;
+}
+.partTwo .card .long li ul{
+  font-weight: normal;
+  padding-left: 10px;
+}
+
+.partTwo .card span{
+  color: #D0221B;
+  font-weight: bolder;
+}
+
+.partTwo img{
+  border-radius: 50%;
+  position: relative; 
+  margin: auto;
+  border: #FFF solid 6px;
+}
+
+.partTwo b{
+  color: #F5A623;
+}
+/*partThree*/
+
+.partThree {
+    height: 800px;
+    width: cover;
+    background-color: rgba(76,116,93, 30%);
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 30px 0;
+    justify-content: center;
+    align-items: center;
+}
+.partThree .card{ 
+  width: 90%;
+  height: auto;
+  position: relative;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.partThree .left{
+  height: 60%;
+  width: 30%;
+  position: relative; 
+  margin: auto 60px;
+    justify-content: center;
+    align-items: center;
+}
+.partThree .right{
+    height: 60%;
+    width: 30%;
+    position: relative; 
+    margin: auto 60px;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.partThree .right img{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+  padding: auto;
+  border: #FFF solid 6px ;
+  border-radius: 18%;
+}
+.partThree .right img:hover{
+  border-radius: 15px;
+  border-color: #6B8EAE;
+  border-radius: 18%;
+}
+
+.partThree .right::-webkit-scrollbar {
+    display: none;
+}
+/* partFour */
+  
+.partFour {
+    height: 600px;
+    width: cover;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.partFour .card{ 
+  width: 100%;
+  height: 20%;
+  position: relative;
+  padding: 10px auto;
+  text-align: center;
+}
+.partFour .contence{
+  width: 100%;
+  height: 60%;
+  position: relative; 
+  padding: 10px auto;
+  display: flex; 
+  margin-left: 60px;
+  overflow: auto;
+}
+.partFour .contence img{
+  border-radius: 12px;
+  margin: 3px;
+  scale: 90%;
+  margin-top: 0%;
+}
+
+.partFour .contence .arrow:hover{
+  border: #fff solid 6px ;
+  border-radius: 12px;
+}
+.partFour .contence::-webkit-scrollbar {
+    display: none;
+}
+
+/* partFive */
+  
+.partFive {
+    height: auto;
+    width: cover;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/SUPPORT/bg2.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position-y: -180px;
+}
+.partFive .card{ 
+  width: 100%;
+  height: 20%;
+  position: relative;
+  margin: 30px;
+  text-align: center;
+}
+.partFive .contence{
+  width: 100%;
+  height: 60%;
+  position: relative; 
+  padding: 0% 12.5%;
+  display: flex; 
+  text-align: left;
+}
+
+/*頁尾*/
+footer {
+  height: 540px;
+  width: cover;
+  box-sizing: border-box;
+  display: flex;
+  margin: auto;
+  padding: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #6B8EAE;
+  text-align: left;
+}
+
+footer .card {
+  height: auto;
+  width: 30%;
+  margin: 15px;
+  position: relative;
+  padding: 0;
+}
+
+footer strong{
+  color: #03045E;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Gen Jyuu Gothic', Regular;
+  position: relative;
+  text-align: left;
+  line-height: 2.5;
+}
+
+footer .icon{
+  position: relative; 
+  width: 270px ;
+  display: flex;	
+  justify-content: space-around;
+}
+
+footer .icon a{
+  width: auto; 
+  height: 45px;
+}
+
+footer a {
+    text-decoration: none;
+}
+footer a:link {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #F5A623; 
+}
+
+footer a:active {
+    color: #03045E;
+}
+
+/*表單*/
+
+.EndTable input[type="email"]{
+  width: 50%;
+  height: auto;
+  padding: 5px;
+  border-radius: 33px;
+  background-color: rgba(255,255,255,30%);
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1em;
+}
+
+.EndTable input[type="email"]:focus {
+  background-color: #F5F1E4;
+  border: 1px solid #ffa700;
+}
+
+.EndTable input[type="email"] {
+    border: none;
+  }
+
+  /*表單按鈕*/
+  .EndTable .Btns {
+    text-align: center;
+    position: relative;
+  }
+  .EndTable .Btns input {
+    border: none;
+    border-radius: 33px;
+    font-size: 1em;
+    color: #fff;
+    margin: auto 15px;
+    padding: 10px;
+  }
+  .EndTable .Btns input[type="submit"] {
+    background: #F5A623;
+    width: 90%;
+  }
+
+  /*滑鼠移到送出鈕*/
+  .EndTable .Btns input:hover {
+    opacity: 0.7;
+  }
+    
+/*pagetop*/
+  .pagetop {
+  width: 45px;
+  height: auto;
+  right: 60px;
+  bottom: 60px;
+  display: block;
+  position: fixed;
+  box-sizing: border-box;
+  border-radius: 50%;
+  }
+
+  /*  */
+/*rwd*/
+
+/* .col{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+}
+.card{
+    height: 100px;
+    background-color: #fa0;
+} */
+
+@media screen and (min-width:768px) {
+    .col{
+        width: 50%;
+    }
+}
+@media screen and (min-width:1024px) {
+    .col{
+        width: 33.3%;
+    }
+}
+@media screen and (min-width:1200px) {
+    .col{
+        width: 25%;
+    }
+}
+
+
+  
+  
+

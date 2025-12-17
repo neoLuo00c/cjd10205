@@ -1,0 +1,499 @@
+@charset "utf-8";
+
+.wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*背景*/
+body {
+  background: #73A2A5;
+}
+
+/*圖片*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*按鈕*/
+button {
+  color: #fff;
+  background-color: #6B8EAE;
+  border: none;
+  text-align: center;
+  padding: 9px 6em;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 9px;
+}
+button:hover {
+  color: black;
+  background-color: #F5A623;
+  
+}
+
+/*第一幕按鈕*/
+.banner button {
+  color: #fff;
+  border: #F2A8A5 solid 3px;
+  background-color: #F2A8A5;
+  text-align: center;
+  padding: 9px 3em;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 9px;
+  margin: 0% 20px;
+}
+.banner button:hover {
+  color: #03045E;
+  background-color: #F5A623;
+  border: #F5A623 solid 3px;
+}
+
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #F5A623;
+}
+
+a:hover {
+    color: #564032; 
+}
+
+a:active {
+    color: #564032;
+}
+a:visited {
+    color: #F5A623;
+}
+
+@font-face {
+  font-family: 'SentyVanilla';
+  src: 
+         url('./SentyVanilla.ttf') format("truetype"),
+        }
+
+/*標題&文字設定*/
+
+body h2,h3,h4{
+   width: cover;
+   position: relative;
+   text-align: center;
+}
+
+h1{
+  margin: 40px auto;
+  padding: 30px;
+  color: #F5A623;
+  font-size: 64px;
+  text-align: center;
+  line-height: 1.5;
+  font-family: 'SentyVanilla', regular;
+}
+h2 {
+  margin: auto;
+  padding: 30px;
+  color: #564032;
+  font-size: 48px;
+  text-align: center;
+  line-height: 1;
+  font-family: 'SentyVanilla', regular;
+}
+
+h3 {
+  padding: 10px;
+  color: #03045E;
+  font-size: 36px;
+  font-family: 'SentyVanilla', regular;
+}
+
+h4 {
+  padding: 10px;
+  color: #F5A623;
+  font-size: 27px;
+  font-family: 'SentyVanilla', regular;
+}
+h5 {
+  padding: 9px;
+  color: #4C745D;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'SentyVanilla', regular;
+}
+p {
+  padding: 5px;
+  color: #000000;
+  font-size: 18px;
+  font-family: 'Gen Jyuu Gothic', Regular;
+  
+}
+
+p span{
+  font-weight: bold;
+  }
+
+h6 {
+  color: #4C745D;
+  font-size: 16px;
+  font-family: 'SentyVanilla', regular;
+}
+
+ul, li, ol {
+  color: #000000;
+  font-size: 18px;
+  font-family: 'Gen Jyuu Gothic', Regular;
+  margin-top: 6px;
+}
+
+/*頁首*/
+
+*{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+.main-menu > ul{
+        display: flex;
+        list-style: none;
+    }
+.main-menu a{
+    color: #6B8EAE;
+    text-decoration: none;
+    display: block;
+    padding: 10px 1em;
+}
+.main-header{
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  z-index: 1;
+}
+.logo img{
+    display: block;
+}
+.menu li {
+  list-style-type: none;
+  display: inline-block;
+  width: 150px;
+  margin: 0 10px;
+}
+.menu a {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  background: #6B8EAE;
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+}
+.menu a:hover {
+  background: #F5A623;
+}
+
+/* banner */
+
+.banner {
+  width: cover;
+  height: 800px;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  text-align: left;
+  background-image: url(./img/index/bg4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.banner .left{
+  width: 30%;
+  height: cover;
+  position: relative; 
+  margin: 1%;
+  padding: 10px;
+  margin-top: -600px;
+}
+.banner .ball{ 
+  width: 90% ;
+  position: relative;
+  top: 0%;
+  display: flex;	
+  justify-content: space-around;
+}
+
+.banner .ball img{
+  margin: 6px;
+  width: 120%;
+  height: auto;
+}
+.banner .ball img:hover{
+  filter: drop-shadow(0px 0px 18px #fff);
+}
+
+.banner center{
+  width: 30%;
+  height: cover;
+  position: relative; 
+  margin: 1%;  
+  flex-wrap: wrap;
+}
+.banner .right{
+    height: cover;
+    width: 30%;
+    position: relative;
+    margin: 1% ;
+    margin-top: -10%;
+}
+
+
+
+/*partOne*/
+
+.partOne {
+    width: 75%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 0 auto 5px auto; 
+    display: flex;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.partOne .card{
+    width: 30%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+
+}
+.partOne img{
+    height: auto;
+    margin: 15px;
+    position: relative;
+}
+.partOne .card p{
+  color: #03045E;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Gen Jyuu Gothic', Regular;
+  position: relative;
+  line-height: 2.5;
+  margin: 10px;
+}
+.partOne img:hover {
+  filter: drop-shadow(0px 0px 18px #fff);
+}
+
+/*partTwo*/
+
+.partTwo {
+    width: 90%;
+    height: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    margin: 0px auto;	
+    justify-content: space-around;
+    padding: auto;
+}
+.partTwo .card{
+    width: 30%;
+    height: 90%;
+    box-sizing: border-box;
+  flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    margin: 30px;
+    padding: 15px;
+    border-radius: 9px;
+  list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.partTwo .card img{
+  border-radius: 9px;
+}
+.partTwo .card h6{
+  margin: 6px;
+}
+
+.partTwo .card:hover {
+  background-color: #F5F1E4;
+  border: #F5A623 solid 3px;
+}
+.partTwo .card:nth-child(1){
+  
+}
+/*頁尾*/
+footer {
+  height: 540px;
+  width: cover;
+  box-sizing: border-box;
+  display: flex;
+  margin: auto;
+  padding: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #6B8EAE;
+  text-align: left;
+}
+
+footer .card {
+  height: auto;
+  width: 30%;
+  margin: 15px;
+  position: relative;
+  padding: 0;
+}
+
+footer strong{
+  color: #03045E;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Gen Jyuu Gothic', Regular;
+  position: relative;
+  text-align: left;
+  line-height: 2.5;
+}
+
+footer .icon{
+  position: relative; 
+  width: 270px ;
+  display: flex;	
+  justify-content: space-around;
+}
+
+footer .icon a{
+  width: auto; 
+  height: 45px;
+}
+
+
+footer a {
+    text-decoration: none;
+}
+footer a:link {
+    color: #fff;
+}
+
+footer a:hover {
+    color: #F5A623; 
+}
+
+footer a:active {
+    color: #03045E;
+}
+
+/*表單*/
+
+.EndTable input[type="email"]{
+  width: 50%;
+  height: auto;
+  padding: 5px;
+  border-radius: 33px;
+  background-color: rgba(255,255,255,30%);
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1em;
+}
+
+.EndTable input[type="email"]:focus {
+  background-color: #F5F1E4;
+  border: 1px solid #ffa700;
+}
+
+.EndTable input[type="email"] {
+    border: none;
+  }
+
+  /*表單按鈕*/
+  .EndTable .Btns {
+    text-align: center;
+    position: relative;
+  }
+  .EndTable .Btns input {
+    border: none;
+    border-radius: 33px;
+    font-size: 1em;
+    color: #fff;
+    margin: auto 15px;
+    padding: 10px;
+  }
+  .EndTable .Btns input[type="submit"] {
+    background: #F5A623;
+    width: 90%;
+  }
+
+  /*滑鼠移到送出鈕*/
+  .EndTable .Btns input:hover {
+    opacity: 0.7;
+  }
+    
+/*pagetop*/
+  .pagetop {
+  width: 45px;
+  height: auto;
+  right: 60px;
+  bottom: 60px;
+  display: block;
+  position: fixed;
+  box-sizing: border-box;
+  border-radius: 50%;
+  }
+
+  /*  */
+/*rwd*/
+
+/* .col{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+}
+.card{
+    height: 100px;
+    background-color: #fa0;
+} */
+
+@media screen and (min-width:768px) {
+    .col{
+        width: 50%;
+    }
+}
+@media screen and (min-width:1024px) {
+    .col{
+        width: 33.3%;
+    }
+}
+@media screen and (min-width:1200px) {
+    .col{
+        width: 25%;
+    }
+}
+
+
+  
+  
+

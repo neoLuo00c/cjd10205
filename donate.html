@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣狐蝠保育網</title>
+    <meta name="description" content="保育網捐款頁面">
+    <meta name="keywords" content="保育,救傷,狐蝠,生態,捐款">
+
+    <!-- icons -->
+    <link rel="icon" href="./img/logo-icon.png">
+    <link rel="icon" sizes="193x193" href="./img/logo-icon.png">
+    <link rel="apple-touch-icon" href="./img/logo-icon.png">
+
+    <!-- inport -->
+    <link href="donate_style.css" rel="stylesheet" media="all">
+    
+    <style>
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="main-header">
+        <div class="logo">
+            <a href="./index.html"><img src="./img/logo-header.png"></a>
+        </div>
+        
+        <nav class="main-menu">
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="./aboutRescue.html">如何救傷</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./aboutUs.html">關於我們</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./aboutAnimal.html">關於狐蝠</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./SUPPORT.html">支持我們</a>
+                </li>
+                <li class="menu-item">
+                    <a href="./donate.html">我要捐款</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main">
+
+        <div class="left">
+            <h1>台灣狐蝠<br>保育網</h1>
+            <div class="card">
+                <img src="./img/donate/History.png" >
+                <img src="./img/donate/piece.png" >
+                <img src="./img/donate/group.png" >
+            </div>  
+            <div class="card">
+                <video muted playsinline controls width="60%" height="auto" >
+                    <source src="./info.mp4" type="video/webm" />
+                </video>
+            </div>
+        </div>
+
+        <main id="right">
+            <form id="donateForm" action="#" method="post">
+                <h6><span class="require">*</span>為必填項目</h6>
+                <h2>捐款單</h2>
+                <table class="donateTable">
+                    <caption></caption>
+                    <tr>
+                        <th>捐款者 *</th>
+                        <td>
+                            <input type="text" name="name" required placeholder="例:張某某">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>行動電話 *</th>
+                        <td>
+                            <input type="tel" name="phone" placeholder="0900123456" required >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>E-Mail *</th>
+                        <td>
+                            <input type="email" name="email" placeholder="sample@gmail.com" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>付款方式 *</th>
+                        <td>
+                            <select name="pay" required>
+                            <option value="" selected>請選擇</option>
+                            <option value="card">信用卡</option>
+                            <option value="code">超商代碼</option>
+                            <option value="LINE">LINE PAY</option>
+                            <option value="account">轉帳匯款</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>捐款金額 *</th>
+                        <td >
+                            <input type="radio" name="money" id="one hundred" value="100" checked required>
+                            <label for="one hundred">100</label>
+                            <input type="radio" name="money" id="three hundreds" value="300" checked required>
+                            <label for="three hundred">300</label>
+                            <input type="radio" name="money" id="five hundreds" value="500" checked required>
+                            <label for="five hundred">500</label>
+                            <input type="radio" name="money" id="other amount" value="other" checked required>
+                            <label for="other amount">其他</label>
+                            <input type="number" name="other-money" placeholder="請輸入金額">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>備註</th>
+                        <td>
+                            <textarea name="message" rows="3" cols="30" placeholder="留言給本會" ></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <div class="donateBtns">
+                    <input type="reset" value="清除重填">
+                    <input type="submit" value="送出">
+                </div>
+            </form>
+        </main>  
+    </div>
+
+    
+</body>
+<footer>
+    <div class="card" >
+        <a href="./index.html" style="height: 100%;width: auto; display: flex; justify-content: center; align-items: center;"><img src="./img/logo-footer.png"></a>
+    </div>
+
+    <div class="card">
+        <ul><strong>聯絡資訊</strong></ul>
+        <ul style="list-style-type: none;">
+            <li>服務時間: </li>
+            <li>09:00~18:00 Mon - Sat.</li>
+            <li>洽詢專線: <a href="tel:+886-905139278">0905-139278</a></li>
+            <li>客服信箱: <a href="mailto:FormosanFlyingFox@taiwan.org">FormosanFlyingFox@taiwan.org</a></li>
+        </ul>
+        <ul>
+            <strong>訂閱電子報</strong>
+        </ul>
+        <ul>
+            <form id="EndForm" action="#" method="post">
+                <div class="EndTable" style="display: flex; width: 100%;"><form id="entryForm" action="#" method="post"></form>
+                    <input type="email" name="email" placeholder="sample@gmail.com" required>
+                    <div class="Btns"><input type="submit" value="送出"></div>
+                </div>
+            </form>
+        </ul>
+        
+    </div>
+
+    <div class="card">
+        <div class="icon">
+            <a href="https://www.facebook.com/"><img src="./img/icon/facebook.svg" alt="facebook" ></a>
+            <a href="https://www.instagram.com/"><img src="./img/icon/instagram.svg" alt="instagram" ></a>
+            <a href="https://www.threads.com/"><img src="./img/icon/threads.svg" alt="threads" ></a>
+            <a href="https://www.x.com/"><img src="./img/icon/twitter.svg" alt="twitter" ></a>
+        </div>
+        <br>
+        <ul><strong>社團法人臺灣狐蝠保育協會</strong></ul>
+        <ul style="list-style-type: none;">
+            <li>立案字號: 台内團字第10900167953號函</li>
+            <li>勸募許可文: 衛部救字第1130376489號函</li>
+            <li>統一編號: 71137640</li>
+            <li>發票愛心碼: 9457</li>
+        </ul>
+        <br>
+        <ul><smal style="color: #fff;">瀏覽次數: 1,234,680</smal></ul>
+    </div>
+    <a class="pagetop" href="#"><img src="./img/icon/arrow.svg"></a>
+</footer>
+
+</html>
